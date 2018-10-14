@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    char abc='a';
+    char abc;
     cout<<"Enter the character ";
     cin>>abc;
     cout<<"ASCII of character "<<abc<<" = "<<(int)abc;
