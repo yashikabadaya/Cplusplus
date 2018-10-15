@@ -1,41 +1,39 @@
 #include<iostream>
 using namespace std;
 void prime_fun(int, int);
-int check_prime(int, int);
+void check_prime(int, int);
 
 using namespace std;
 int main()
 {
     int range;
-    cout<<"enter the maximum range of prime number";
+    cout<<"enter the maximum range of prime number"; // 1<prime<range
     cin>>range;
-
+    cout<<"Prime numbers between 1 to "<<range;
     prime_fun(range,2);
     return 0;
 }
 
 void prime_fun(int range,int number)
 {
-    int check;
     if(number==range)
         return;
 
-    check=check_prime(number,2);
-
-    if(check==1)
-        cout<<endl<<number;
-    
+    check_prime(number,2);
     prime_fun(range,++number);
 }
 
-int check_prime(int numb,int value)
+void check_prime(int number,int value)
 {
-    if(value<=(numb/2))
+    if(value<=(number/2))
     {
-    if((numb%value)==0)
-        return 0;
-    check_prime(numb,++value);
+        if((number%value)==0)
+            return;
+        check_prime(number,++value);
     }
     else
-        return 1;
+    {
+        cout<<endl<<number;
+        return ;
+    }
 }
