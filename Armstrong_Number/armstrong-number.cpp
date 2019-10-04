@@ -21,8 +21,10 @@ string isArmstrong(int x){
 
 int main() {
     int t, x;
+    //Enter number of test cases
     cin >> t;
     for(int i=0; i < t; i++){
+        // x is number to be tested
         cin >> x;
         cout << isArmstrong(x) << '\n';
     }
